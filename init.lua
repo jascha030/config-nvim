@@ -1,6 +1,6 @@
 -- init.lua
 vim.g.mapleader = '<space>'
-vim.cmd 'autocmd BufWritePost PackerCompile'
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 require('plugins')
 require('settings')
