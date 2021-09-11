@@ -11,18 +11,18 @@ end
 
 -- Colors
 cmd([[colorscheme tokyonight]])
--- Tabs (expandtab, smartindent defined in options_buffer)
-cmd('set ts=4')
-cmd('set sw=4')
-cmd('set incsearch')
-cmd('set colorcolumn=120')
-cmd('set backspace=indent,eol,start')
 
+-- Tabs (expandtab, smartindent defined in options_buffer)
 local options_global = {
     mouse = 'a',
     showtabline = 2,
     scrolloff = 5,
     termguicolors = true,
+    incsearch = true,
+    colorcolumn = '120',
+    backspace = 'indent,eol,start',
+    tabstop = 4,
+    shiftwidth = 4,
     fileencoding = 'utf-8',
 }
 
@@ -33,7 +33,7 @@ local options_buffer = {
 
 local options_window = {
     number = true,
-    cursorline = true
+    cursorline = true,
 }
 
 local options_vim_global = {
