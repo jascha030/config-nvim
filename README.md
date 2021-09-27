@@ -2,6 +2,8 @@
 
 Originally part of my [dotfiles repo](https://github.com/jascha030/dotfiles), but decided to separate the NVIM config, to keep it a bit more organized.
 
+![Screenshot with iTerm2 and TMUX](https://github.com/jascha030/config-nvim/blob/main/screens/screen.png)
+
 ## Getting Started
 
 ### Prerequisites
