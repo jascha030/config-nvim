@@ -55,4 +55,45 @@ for _, lsp in ipairs(servers) do
 end
 
 
- 
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
+
+require'lspconfig'.intelephense.setup{
+    cmd = { "intelephense", "--stdio" },
+    filetypes = { "php" },
+    log_level = 2,
+    settings = {
+        intelephense = {
+            stubs = { 
+                "bcmath",
+                "bz2",
+                "calendar",
+                "Core",
+                "curl",
+                "zip",
+                "zlib",
+                "wordpress",
+                "woocommerce",
+                "acf-pro",
+                "wordpress-globals",
+                "wp-cli",
+                "genesis",
+                "polylang"
+            },
+            files = {
+                maxSize = 5000000;
+            };
+        };
+    }
+}

@@ -3,7 +3,10 @@ vim.cmd([[packadd packer.nvim]], false)
 
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
-	use 'neovim/nvim-lspconfig'
+	use {
+		'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
+	}
 	use 'marko-cerovac/material.nvim'
 	use { 'nvim-treesitter/nvim-treesitter', irun = ':TSUpdate' } 
 	use 'nvim-treesitter/playground'
@@ -27,5 +30,6 @@ return require('packer').startup(function()
     use 'iamcco/markdown-preview.nvim'
     use 'ojroques/vim-oscyank'
     use 'folke/tokyonight.nvim'
+    use 'ncm2/ncm2'
 end)
 
