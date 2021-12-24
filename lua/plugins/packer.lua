@@ -31,5 +31,6 @@ return require('packer').startup(function()
     use 'ojroques/vim-oscyank'
     use 'folke/tokyonight.nvim'
     use 'ncm2/ncm2'
+	use 'wakatime/vim-wakatime'
 end)
 
